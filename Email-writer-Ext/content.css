@@ -1,0 +1,37 @@
+/* Style for the dropdown container */
+.ai-tone-dropdown {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 14px;
+    color: #202124;
+    background-color: #f6f8f9;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    -webkit-appearance: none; /* Remove default browser styling */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#5f6368" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 30px; /* Make space for the icon */
+}
+
+/* Style for the options within the dropdown */
+.ai-tone-dropdown option {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #202124;
+}
+
+/* Hover and focus states */
+.ai-tone-dropdown:hover {
+    background-color: #e8eaed;
+}
+
+.ai-tone-dropdown:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 1px #1a73e8;
+}

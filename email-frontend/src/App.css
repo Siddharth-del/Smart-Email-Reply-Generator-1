@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0f0ff 0%, #c5e0ff 100%);
+}
+
+/* Layer 1: floating radial shape */
+body::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #b0d6ff 0%, transparent 60%);
+  opacity: 0.5;
+  animation: float1 15s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Layer 2: floating radial shape */
+body::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -120px;
+  right: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #90c0f8 0%, transparent 60%);
+  opacity: 0.35;
+  animation: float2 18s ease-in-out infinite reverse;
+  z-index: 0;
+}
+
+/* Optional: subtle particle effect using repeating radial gradients */
+body::after {
+  background: radial-gradient(circle, #90c0f8 0%, transparent 60%), 
+              repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), transparent 2px, transparent 10px);
+}
+
+/* Floating animations */
+@keyframes float1 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(20px, 15px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-25px, -20px); }
+  100% { transform: translate(0,0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body::before {
+    width: 200px;
+    height: 200px;
+    top: -60px;
+    left: -40px;
+  }
+  body::after {
+    width: 250px;
+    height: 250px;
+    bottom: -80px;
+    right: -60px;
+  }
+}
