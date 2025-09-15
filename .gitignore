@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+dist/
+build/
+
+# Spring Boot
+target/
+*.jar
+*.war
+
+# OS / IDE
+.DS_Store
+*.log
+.idea/
+.vscode/
+
+# Others
+*.msi
